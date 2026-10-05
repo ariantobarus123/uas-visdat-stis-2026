@@ -1,0 +1,65 @@
+Kabupaten/Kota,kolom,nilai_lama,nilai_baru,alasan
+Pegunungan Bintang,Provinsi,Kepulauan Riau,Papua Pegunungan,R3: profil & jumlah penduduk tidak sesuai provinsi tercatat
+Kota Banjar,Provinsi,Kalimantan Selatan,Jawa Barat,R3: profil & jumlah penduduk tidak sesuai provinsi tercatat
+Solok,Kode_Wilayah,13.72,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Pegunungan Bintang,Kode_Wilayah,21.01,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Bogor,Kode_Wilayah,32.71,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Sukabumi,Kode_Wilayah,32.72,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Bandung,Kode_Wilayah,32.73,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Cirebon,Kode_Wilayah,32.74,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Bekasi,Kode_Wilayah,32.75,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Tasikmalaya,Kode_Wilayah,32.78,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Magelang,Kode_Wilayah,33.71,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Semarang,Kode_Wilayah,33.74,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Pekalongan,Kode_Wilayah,33.75,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Tegal,Kode_Wilayah,33.76,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Kediri,Kode_Wilayah,35.71,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Blitar,Kode_Wilayah,35.72,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Malang,Kode_Wilayah,35.73,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Probolinggo,Kode_Wilayah,35.74,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Pasuruan,Kode_Wilayah,35.75,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Mojokerto,Kode_Wilayah,35.76,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Madiun,Kode_Wilayah,35.77,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Tangerang,Kode_Wilayah,36.71,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Serang,Kode_Wilayah,36.73,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Bima,Kode_Wilayah,52.72,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Kupang,Kode_Wilayah,53.71,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Kota Banjar,Kode_Wilayah,63.03,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Gorontalo,Kode_Wilayah,75.71,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Jayapura,Kode_Wilayah,91.71,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Sorong,Kode_Wilayah,96.71,,"R2: kode ganda, tidak sesuai konvensi kab/kota; kode asli tidak diketahui"
+Solok,Latitude/Longitude,"-0.78656,100.62276","-1.19566,101.04511",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Pegunungan Bintang,Latitude/Longitude,"0.91876,105.20115","-4.53553,140.55627",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Bogor,Latitude/Longitude,"-6.59028,106.79425","-6.56016,106.76824",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Sukabumi,Latitude/Longitude,"-6.94335,106.91305","-7.07221,106.70842",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Bandung,Latitude/Longitude,"-6.9011,107.64177","-7.0052,107.53215",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Tasikmalaya,Latitude/Longitude,"-7.36265,108.22376","-7.4949,108.13835",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Cirebon,Latitude/Longitude,"-6.72254,108.56943","-6.74127,108.55113",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Bekasi,Latitude/Longitude,"-6.29473,106.97669","-6.21305,107.12367",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Kota Banjar,Latitude/Longitude,"-3.27487,115.11609","-7.37456,108.55172",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Magelang,Latitude/Longitude,"-7.47133,110.21694","-7.50292,110.24778",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Semarang,Latitude/Longitude,"-6.99189,110.39083","-7.27487,110.47759",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Pekalongan,Latitude/Longitude,"-6.89584,109.6733","-7.06078,109.63244",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Tegal,Latitude/Longitude,"-6.86736,109.11922","-7.02837,109.16084",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Blitar,Latitude/Longitude,"-8.09478,112.16485",,R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Kediri,Latitude/Longitude,"-7.82332,112.02362","-7.82944,112.08516",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Malang,Latitude/Longitude,"-7.97148,112.62535","-8.12286,112.63884",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Probolinggo,Latitude/Longitude,"-7.76311,113.21516","-7.86696,113.31987",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Pasuruan,Latitude/Longitude,"-7.65025,112.91032","-7.74187,112.83103",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Mojokerto,Latitude/Longitude,"-7.47084,112.44175","-7.54963,112.4824",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Madiun,Latitude/Longitude,"-7.6455,111.51821","-7.62484,111.64472",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Tangerang,Latitude/Longitude,"-6.16866,106.65615","-6.19238,106.5442",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Serang,Latitude/Longitude,"-6.13621,106.16178","-6.14348,106.15368",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Bima,Latitude/Longitude,"-8.44817,118.7669","-8.46664,118.58346",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Kupang,Latitude/Longitude,"-10.21042,123.61355","-9.97201,123.68996",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Gorontalo,Latitude/Longitude,"0.53473,123.05388","0.69366,122.89329",R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Sorong,Latitude/Longitude,"-0.89599,131.27224",,R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Jayapura,Latitude/Longitude,"-2.61864,140.7531",,R4: koordinat sama dengan kota padanan; dihitung ulang dari poligon
+Puncak,TPT_Jumlah,0.0,,"R5: TPT total 0,00 dianggap tidak tersedia"
+Puncak,TPT_laki-laki,0.0,,"R5: TPT total 0,00 dianggap tidak tersedia"
+Puncak,TPT_perempuan,0.0,,"R5: TPT total 0,00 dianggap tidak tersedia"
+Puncak,sanitasi_layak,0.0,,"R5: akses 0,00% dianggap tidak tersedia (perlu verifikasi ke BPS)"
+Tolikara,sanitasi_layak,0.0,,"R5: akses 0,00% dianggap tidak tersedia (perlu verifikasi ke BPS)"
+Mamberamo Tengah,sanitasi_layak,0.0,,"R5: akses 0,00% dianggap tidak tersedia (perlu verifikasi ke BPS)"
+Lanny Jaya,air_minum_layak,0.0,,"R5: akses 0,00% dianggap tidak tersedia (perlu verifikasi ke BPS)"
+Mamberamo Tengah,air_minum_layak,0.0,,"R5: akses 0,00% dianggap tidak tersedia (perlu verifikasi ke BPS)"

@@ -1,0 +1,14 @@
+kolom,label,satuan,definisi,sumber,periode,arah_baik,status_verifikasi
+IPM,Indeks Pembangunan Manusia,Poin (0-100),Capaian pembangunan manusia: kesehatan pendidikan dan standar hidup layak,BPS RI - IPM menurut kabupaten/kota,2024,lebih tinggi lebih baik,Sumber umum tercatat; ID tabel belum didokumentasikan
+Persentase_Penduduk_Miskin_2024,Persentase Penduduk Miskin,%,Proporsi penduduk dengan pengeluaran per kapita di bawah Garis Kemiskinan,BPS RI - Persentase penduduk miskin menurut kabupaten/kota (Susenas),2024,lebih rendah lebih baik,Sumber umum tercatat; bulan survei belum didokumentasikan
+TPT_Jumlah,Tingkat Pengangguran Terbuka (total),%,Persentase pengangguran terhadap angkatan kerja,BPS RI - Sakernas,2024,lebih rendah lebih baik,Sumber umum tercatat; periode Februari/Agustus belum didokumentasikan
+TPT_laki-laki,TPT Laki-laki,%,TPT penduduk laki-laki,BPS RI - Sakernas,2024,lebih rendah lebih baik,Sama dengan TPT total
+TPT_perempuan,TPT Perempuan,%,TPT penduduk perempuan,BPS RI - Sakernas,2024,lebih rendah lebih baik,Sama dengan TPT total
+TPAK_laki-laki,TPAK Laki-laki,%,Tingkat Partisipasi Angkatan Kerja laki-laki usia 15+,BPS RI - Sakernas,2024,tidak bernilai baik/buruk,Sama dengan TPT total
+TPAK_perempuan,TPAK Perempuan,%,Tingkat Partisipasi Angkatan Kerja perempuan usia 15+,BPS RI - Sakernas,2024,tidak bernilai baik/buruk,Sama dengan TPT total
+pdrb_perkapita_adhb,PDRB per Kapita ADHB,Rupiah (satuan belum terverifikasi),PDRB per kapita atas dasar harga berlaku,BPS RI - PDRB per kapita,2024,lebih tinggi lebih baik,PERLU VERIFIKASI: nilai terendah (173) tidak masuk akal sebagai Rp per tahun; cek satuan di tabel BPS
+pdrb_perkapita_adhk,PDRB per Kapita ADHK,Rupiah (satuan belum terverifikasi),PDRB per kapita atas dasar harga konstan,BPS RI - PDRB per kapita,2024,lebih tinggi lebih baik,PERLU VERIFIKASI: lihat ADHB
+pertumbuhan_ekonomi,Laju Pertumbuhan Ekonomi,%,Pertumbuhan riil PDRB dari tahun sebelumnya,BPS RI - Laju pertumbuhan ekonomi,2024,lebih tinggi lebih baik,Sumber umum tercatat
+jumlah_penduduk,Jumlah Penduduk,Jiwa,Jumlah penduduk (estimasi tengah tahun),BELUM DIDOKUMENTASIKAN,2024,tidak bernilai baik/buruk,PERLU DIISI: sumber jumlah penduduk tidak tercantum pada README awal
+sanitasi_layak,Akses Sanitasi Layak,%,Persentase rumah tangga dengan sanitasi layak,BPS RI - Susenas,2024,lebih tinggi lebih baik,Sumber umum tercatat
+air_minum_layak,Akses Air Minum Layak,%,Persentase rumah tangga dengan sumber air minum layak,BPS RI - Susenas,2024,lebih tinggi lebih baik,Sumber umum tercatat
