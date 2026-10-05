@@ -2,7 +2,6 @@ import os
 import numpy as np
 import pandas as pd
 import streamlit as st
-
 from src.data_loader import (
     load_dataset, load_geojson, INDICATORS_META, OFFICIAL_BPS_2024, PROV_TO_ISLAND, SHORT_LABELS,
     CHOROPLETH_OK, load_metadata, load_corrections, load_benchmark_table,
@@ -45,7 +44,6 @@ header[data-testid="stHeader"] svg {fill:#5b2a86 !important;}
 }
 h1,h2,h3,h4,h5 {letter-spacing:-0.01em; color:#2a1253;}
 h3 {font-weight:800 !important;}
-
 /* Hero */
 .hero {position:relative; overflow:hidden; border-radius:22px; padding:34px 40px; color:#fff; margin-bottom:22px;
   background: radial-gradient(900px 300px at 85% -20%, rgba(162,77,114,.45), transparent 60%),
@@ -70,7 +68,6 @@ h3 {font-weight:800 !important;}
   background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14); border-radius:14px; padding:12px 20px; min-width:132px;
   backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); box-shadow:0 8px 20px -10px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.1);}
 .hero-stats b {display:block; font-size:1.45rem; color:#fff; letter-spacing:-.01em; text-transform:none; margin-top:3px;}
-
 /* KPI */
 .kpi {background:#fff; border-radius:18px; padding:18px 20px 16px; border:1px solid #ece4f6;
   box-shadow:0 1px 2px rgba(42,18,83,.05), 0 14px 28px -14px rgba(74,29,122,.26);
@@ -87,31 +84,26 @@ h3 {font-weight:800 !important;}
 .pill {display:inline-block; padding:2px 9px; border-radius:999px; font-size:.74rem; font-weight:700;}
 .pill.up {background:#dcfce7; color:#166534;} .pill.down {background:#fee2e2; color:#991b1b;}
 .pill.neutral {background:#e2e8f0; color:#334155;}
-
 /* Insight */
 .insight {background:linear-gradient(180deg,#fff,#fafaff); border:1px solid #e0e7ff; border-radius:16px; padding:14px 18px;
   font-size:.88rem; line-height:1.55; color:#334155; height:100%;}
 .insight .t {font-size:.7rem; font-weight:800; color:#4f46e5; text-transform:uppercase; letter-spacing:.09em; margin-bottom:4px;}
 .insight b {color:#0f172a;}
-
 /* Temuan (storytelling) */
 .story {background:linear-gradient(180deg,#fff,#fafaff); border:1px solid #e0e7ff; border-left:5px solid #4f46e5; border-radius:16px;
   padding:16px 20px; font-size:.88rem; line-height:1.6; color:#334155; height:100%;}
 .story .q {font-size:1rem; font-weight:800; color:#0f172a; margin-bottom:8px; line-height:1.35;}
 .story p {margin:0 0 7px;} .story b.k {color:#4f46e5; text-transform:uppercase; font-size:.68rem; letter-spacing:.08em; display:block; margin-top:6px;}
 .story .lim {color:#92400e; background:#fffbeb; border-radius:10px; padding:6px 10px; font-size:.82rem; margin-top:6px;}
-
 /* Section title */
 .sec {display:flex; align-items:center; gap:10px; margin:6px 0 4px;}
 .sec .bar {width:5px; height:22px; border-radius:4px; background:linear-gradient(#4f46e5,#0d9488);}
 .sec h4 {margin:0; font-size:1.08rem; font-weight:800;}
 .sub {color:#64748b; font-size:.88rem; margin:0 0 12px 15px;}
-
 /* Panels (st.container(border=True)) */
 div[data-testid="stVerticalBlockBorderWrapper"] {background:linear-gradient(180deg,#ffffff 0%,#f9fbff 100%); border-radius:18px !important;
   border-color:#e6dcf2 !important;
   box-shadow:0 1px 2px rgba(42,18,83,.05), 0 14px 32px -16px rgba(74,29,122,.24);}
-
 /* Profile */
 .profile {background:linear-gradient(160deg,#0f172a,#1e1b4b); color:#e2e8f0; border-radius:18px; padding:22px 22px 18px; height:100%;}
 .profile .nm {font-size:1.35rem; font-weight:800; color:#fff; letter-spacing:-.01em;}
@@ -123,7 +115,6 @@ div[data-testid="stVerticalBlockBorderWrapper"] {background:linear-gradient(180d
 .profile .pc div {flex:1; background:rgba(255,255,255,.07); border-radius:12px; padding:9px 12px; font-size:.7rem; color:#94a3b8; font-weight:700; letter-spacing:.06em;}
 .profile .pc b {display:block; font-size:1.15rem; color:#fff; letter-spacing:0;}
 .tag {display:inline-block; padding:3px 10px; border-radius:999px; font-size:.72rem; font-weight:700; color:#fff; margin-top:8px;}
-
 /* Tabs */
 .stTabs [data-baseweb="tab-list"], .stTabs [role="tablist"] {gap:6px; background:linear-gradient(180deg,#fff,#faf6fd); padding:6px; border-radius:16px; border:1px solid #e6dcf2;
   box-shadow:0 1px 2px rgba(42,18,83,.05), 0 12px 26px -14px rgba(74,29,122,.28); margin-bottom:12px; overflow-x:auto;}
@@ -132,7 +123,6 @@ div[data-testid="stVerticalBlockBorderWrapper"] {background:linear-gradient(180d
 .stTabs [aria-selected="true"] {color:#fff !important; background:linear-gradient(135deg,#4c1d95,#9d3d8f) !important;
   box-shadow:0 10px 20px -8px rgba(110,40,140,.8), inset 0 1px 0 rgba(255,255,255,.25);}
 .stTabs [data-baseweb="tab-highlight"], .stTabs [data-baseweb="tab-border"] {display:none;}
-
 /* Sidebar */
 section[data-testid="stSidebar"] {background:linear-gradient(180deg,#ffffff,#f3f6fc); border-right:1px solid rgba(255,255,255,.2); box-shadow:12px 0 40px -18px rgba(0,0,0,.7);}
 .brand {display:flex; align-items:center; gap:12px; margin-bottom:6px;}
@@ -145,17 +135,14 @@ section[data-testid="stSidebar"] {background:linear-gradient(180deg,#ffffff,#f3f
 .stDownloadButton>button {background:linear-gradient(135deg,#4c1d95,#9d3d8f); color:#fff; border:none;}
 .stDownloadButton>button:hover {color:#fff; filter:brightness(1.08);}
 .foot {text-align:center; color:#64748b; font-size:.8rem; padding:18px 0 4px;}
-
 /* Wadah di dalam sidebar kadang ikut berkelas .block-container (tergantung versi Streamlit): netralkan gaya kartu konten utama */
 section[data-testid="stSidebar"] .block-container, [data-testid="stSidebarContent"] .block-container, .stSidebarBlockContainer,
 [data-testid="stSidebarUserContent"] {background:transparent !important; background-image:none !important; border:none !important;
   box-shadow:none !important; border-radius:0 !important; width:100% !important; max-width:none !important; margin:0 !important;}
 section[data-testid="stSidebar"] .block-container {padding-top:1rem !important; padding-left:1rem !important; padding-right:1rem !important;}
-
 /* Streamlit >= 1.4x membungkus isi sidebar dengan stVerticalBlockBorderWrapper: jangan beri gaya kartu putih (aturan "Panels" di atas) */
 section[data-testid="stSidebar"] div[data-testid="stVerticalBlockBorderWrapper"] {background:transparent !important; background-image:none !important;
   border:none !important; box-shadow:none !important; border-radius:0 !important;}
-
 /* Sidebar bertema ungu (selaras header) */
 section[data-testid="stSidebar"] {background:linear-gradient(180deg,#17112F 0%,#32145F 48%,#63205F 100%) !important;
   border-right:1px solid rgba(255,255,255,.08); box-shadow:12px 0 40px -18px rgba(23,17,47,.8);}
@@ -206,7 +193,6 @@ def hero_art_css():
 
 
 st.markdown(hero_art_css(), unsafe_allow_html=True)
-
 ISLAND_ART = {"Jawa": "jawa", "Sumatera": "sumatra", "Kalimantan": "kalimantan", "Sulawesi": "sulawesi",
               "Bali & Nusa Tenggara": "bali_nusa_tenggara", "Maluku": "maluku", "Papua": "papua"}
 
@@ -248,7 +234,6 @@ def _st_ver():
 
 # Mode lebar "stretch" hanya ada di Streamlit >= 1.50; versi lama memakai use_container_width
 STRETCH = {"width": "stretch"} if _st_ver() >= (1, 50) else {"use_container_width": True}
-
 PLOT_CFG = {"displaylogo": False, "modeBarButtonsToRemove": ["lasso2d", "select2d", "autoScale2d"]}
 
 
@@ -259,12 +244,12 @@ def show(fig, key=None, cap=None, **kw):
     return ev
 
 
-def kpi(label, value, unit, icon, color, meta):
+def kpi(label, value, unit, color, meta, icon=""):
+    ico = f'<div class="kpi-ico">{icon}</div>' if icon else ""
     html(f"""<div class="kpi" style="--c:{color}">
-      <div class="kpi-top"><div class="kpi-label">{label}</div><div class="kpi-ico">{icon}</div></div>
+      <div class="kpi-top"><div class="kpi-label">{label}</div>{ico}</div>
       <div class="kpi-val">{value}<small>{unit}</small></div>
       <div class="kpi-meta">{meta}</div></div>""")
-
 
 def delta_pill(diff, higher_is_better, fmt="{:+.2f}"):
     if abs(diff) < 0.005:
@@ -286,7 +271,6 @@ INDICATOR_OPTS = [c for c in ["IPM", "Persentase_Penduduk_Miskin_2024", "TPT_Jum
 BENCH = load_benchmark_table().set_index("indikator")
 SRC_NOTE = "Sumber: BPS RI 2024"
 NO_POLYGON = sorted(set(df_master["Kabupaten/Kota"]) - {f["id"] for f in geojson["features"]})
-
 # ---- State seleksi bersama (cross-filter): klik pada peta atau scatter PCA memilih kabupaten/kota yang sama
 st.session_state.setdefault("nonce", 0)
 st.session_state.setdefault("last_click", {})
@@ -308,6 +292,7 @@ def _clicked(state_key, field):
             return v
     return None
 
+
 def _reset_selection():
     """Callback tombol reset: kosongkan seleksi klik (ganti key grafik) dan kembalikan wilayah default."""
     st.session_state["nonce"] += 1
@@ -321,40 +306,31 @@ def fmt(v, nd=2, suffix=""):
 
 # ------------------------------------------------------------------ SIDEBAR
 with st.sidebar:
-    html("""<div class="brand"><div class="logo">🇮🇩</div>
+    html("""<div class="brand"><div class="logo"><svg width="28" height="19" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg" style="display:block;border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,.45)"><rect width="3" height="1" fill="#E70011"/><rect y="1" width="3" height="1" fill="#FFFFFF"/></svg></div>
       <div><div class="t">Eksplorasi Indonesia</div><div class="s">Sosial-Ekonomi · BPS 2024</div></div></div>""")
     st.write("")
-    st.markdown("##### 🎯 Filter Wilayah")
+    st.markdown("#####  Filter Wilayah")
     islands = ["Semua Pulau"] + sorted(set(PROV_TO_ISLAND.values()))
     selected_island = st.selectbox("Pulau / Wilayah", islands)
     provs = sorted(df_master["Provinsi"].unique() if selected_island == "Semua Pulau"
                    else df_master.loc[df_master["Pulau"] == selected_island, "Provinsi"].unique())
     selected_prov = st.selectbox("Provinsi", ["Semua Provinsi"] + provs)
-
-    st.markdown("##### 🎨 Tampilan Peta")
+    st.markdown("#####  Tampilan Peta")
     map_style = st.selectbox("Gaya peta", available_map_styles(), format_func=MAP_STYLE_LABELS.get)
     st.caption("Peta dasar memuat tile daring. Gaya Mapbox muncul bila token Mapbox diatur (lihat README); "
                "tanpa internet, pilih *Polos*.")
-
 df_f = df_master.copy()
 if selected_island != "Semua Pulau":
     df_f = df_f[df_f["Pulau"] == selected_island]
 if selected_prov != "Semua Provinsi":
     df_f = df_f[df_f["Provinsi"] == selected_prov]
-
 with st.sidebar:
     html(f'<div class="side-count">📍 {len(df_f)} dari 514 kabupaten/kota terpilih</div>')
     st.write("")
-    with st.expander("✅ Ketentuan Lampiran A"):
-        st.markdown("- 13 variabel numerik (min. 8)\n- Visualisasi berdimensi tinggi (PCA, PCP, heatmap)\n"
-                    "- Visualisasi geospasial (choropleth & simbol proporsional)\n"
-                    "- Brushing & linking antar tampilan\n- Peta bersih tanpa pin")
     st.caption("Sumber: BPS RI, rilis 2024")
-
 if df_f.empty:
     st.warning("Tidak ada wilayah yang cocok dengan filter.")
     st.stop()
-
 KAB_LIST = sorted(df_f["Kabupaten/Kota"].unique())
 if st.session_state.get("sel_kab") not in KAB_LIST:
     st.session_state["sel_kab"] = "Sleman" if "Sleman" in KAB_LIST else KAB_LIST[0]
@@ -363,7 +339,6 @@ for _src, (_key, _field) in {"map": (KEY_MAP, "location"), "pca": (KEY_PCA, "cus
     if _c and _c != st.session_state["last_click"].get(_src) and _c in KAB_LIST:
         st.session_state["sel_kab"] = _c
     st.session_state["last_click"][_src] = _c
-
 # ------------------------------------------------------------------ HERO
 scope = (selected_prov if selected_prov != "Semua Provinsi"
          else selected_island if selected_island != "Semua Pulau" else "Seluruh Indonesia")
@@ -380,36 +355,33 @@ html(f"""<div class="hero">
     <div>Penduduk<b>{df_f['jumlah_penduduk'].sum() / 1e6:,.1f} jt</b></div>
     <div>Indikator<b>13</b></div>
   </div></div>""")
-
-tab1, tab_find, tab2, tab3, tab4, tab_hier, tab5 = st.tabs(["📊 Ringkasan & Peta", "💡 Temuan Utama", "🔬 Eksplorasi PCA",
-                                                            "📈 Profil Multivariat", "🗺️ Peta & Data", "🧭 Hirarki Wilayah",
-                                                            "📖 Metodologi & Sumber Data"])
-
+tab1, tab_find, tab2, tab3, tab4, tab_hier, tab5 = st.tabs([" Ringkasan & Peta", " Temuan Utama", " Eksplorasi PCA",
+                                                            " Profil Multivariat", "🗺️ Peta & Data", " Hirarki Wilayah",
+                                                            " Metodologi & Sumber Data"])
 # ================================================================== TAB 1
 with tab1:
     ipm, pov, tpt = (df_f["IPM"].mean(), df_f["Persentase_Penduduk_Miskin_2024"].mean(), df_f["TPT_Jumlah"].mean())
     tpak_l, tpak_p = df_f["TPAK_laki-laki"].mean(), df_f["TPAK_perempuan"].mean()
     k1, k2, k3, k4, k5 = st.columns(5)
     with k1:
-        kpi("Wilayah", f"{len(df_f)}", "/ 514", "🏙️", "#4f46e5",
+        kpi("Wilayah", f"{len(df_f)}", "/ 514",  "#4f46e5",
             f"<span>{df_f['Provinsi'].nunique()} provinsi · {df_f['jumlah_penduduk'].sum() / 1e6:,.1f} jt jiwa</span>")
     with k2:
-        kpi("IPM rata-rata", f"{ipm:.2f}", "poin", "🎓", "#0d9488",
+        kpi("IPM rata-rata", f"{ipm:.2f}", "poin",  "#0d9488",
             f"{delta_pill(ipm - OFFICIAL_BPS_2024['IPM'], True)}<span>vs nasional {OFFICIAL_BPS_2024['IPM']:.2f}</span>")
     with k3:
-        kpi("Kemiskinan", f"{pov:.2f}", "%", "🏘️", "#d97706",
+        kpi("Kemiskinan", f"{pov:.2f}", "%",  "#d97706",
             f"{delta_pill(pov - OFFICIAL_BPS_2024['Persentase_Penduduk_Miskin'], False)}<span>vs nasional {OFFICIAL_BPS_2024['Persentase_Penduduk_Miskin']:.2f}%</span>")
     with k4:
-        kpi("Pengangguran (TPT)", f"{tpt:.2f}", "%", "💼", "#4f46e5",
+        kpi("Pengangguran (TPT)", f"{tpt:.2f}", "%",  "#4f46e5",
             f"{delta_pill(tpt - OFFICIAL_BPS_2024['TPT'], False)}<span>vs nasional {OFFICIAL_BPS_2024['TPT']:.2f}%</span>")
     with k5:
-        kpi("TPAK", f"{(tpak_l + tpak_p) / 2:.2f}", "%", "👷", "#0284c7",
+        kpi("TPAK", f"{(tpak_l + tpak_p) / 2:.2f}", "%",  "#0284c7",
             f'<span class="pill neutral">L {tpak_l:.1f}%</span><span class="pill neutral">P {tpak_p:.1f}%</span>')
     st.caption(f"Nilai utama = rata-rata tak berbobot kabupaten/kota terpilih (n = {len(df_f)}); pembanding \"nasional\" adalah angka agregat BPS "
                f"(IPM {BENCH.loc['IPM','periode']}, kemiskinan {BENCH.loc['Persentase_Penduduk_Miskin','periode']}, "
                f"TPT {BENCH.loc['TPT','periode']}) sehingga selisih bersifat indikatif. ▲▼ hijau = lebih baik, merah = lebih buruk. "
                "TPAK = rata-rata TPAK laki-laki dan perempuan. Data tidak tersedia dikecualikan dari rata-rata.")
-
     # Insight otomatis
     hi_r, lo_r = df_f.loc[df_f["IPM"].idxmax()], df_f.loc[df_f["IPM"].idxmin()]
     r_ipm_pov = df_f["IPM"].corr(df_f["Persentase_Penduduk_Miskin_2024"]) if len(df_f) > 2 else float("nan")
@@ -426,7 +398,6 @@ with tab1:
     with i3:
         html(f'<div class="insight"><div class="t">🏝️ Antar Wilayah</div>Rata-rata IPM tertinggi di <b>{isl.idxmax()}</b> '
              f'({isl.max():.2f}); terendah di <b>{isl.idxmin()}</b> ({isl.min():.2f}).</div>')
-
     st.write("")
     with st.container(border=True):
         section("Peta Choropleth Wilayah", "Klik sebuah wilayah untuk memilihnya; pilihan ikut berlaku di tab Eksplorasi PCA (brushing & linking).")
@@ -452,7 +423,6 @@ with tab1:
               IPM <b>{sel_row['IPM']:.2f}</b> · kemiskinan <b>{sel_row['Persentase_Penduduk_Miskin_2024']:.2f}%</b> ·
               {get_short_label(ov_ind)} <b>{sel_row[ov_ind]:,.2f}</b> (rata-rata nasional {df_master[ov_ind].mean():,.2f}).
               Profil lengkap ada di tab <i>Eksplorasi PCA</i>.</div>""")
-
     st.write("")
     nat_mean = df_master[ov_ind].mean()
     cl, cr = st.columns(2, gap="medium")
@@ -466,7 +436,6 @@ with tab1:
             section("Top 5 Terendah", get_meta_label(ov_ind))
             show(plot_rank_bar(df_f, ov_ind, 5, False, ref=nat_mean), key="bot5",
                  cap=f"Garis putus = rata-rata nasional (514 kab/kota). {SRC_NOTE}")
-
     cl, cr = st.columns(2, gap="medium")
     with cl:
         with st.container(border=True):
@@ -476,7 +445,6 @@ with tab1:
             show(plot_distribution(df_f, ov_ind), key="dist")
     with st.container(border=True):
         show(plot_bubble_overview(df_f), key="bubble")
-
 # ================================================================== TAB TEMUAN UTAMA
 with tab_find:
     section("Temuan Utama: dari Data ke Insight",
@@ -491,7 +459,7 @@ with tab_find:
           <b class="k">Temuan</b><p>{finding}</p>
           <b class="k">Interpretasi</b><p>{interp}</p>
           <b class="k">Implikasi</b><p>{impl}</p>
-          <div class="lim"><b>Keterbatasan:</b> {limit}</div></div>""")
+          </div>""")
 
     def names(frame, n=5, by=None, asc=False):
         f = frame.sort_values(by, ascending=asc) if by else frame
@@ -515,7 +483,6 @@ with tab_find:
               "Wilayah-wilayah ini layak dipelajari terpisah: kenaikan IPM saja belum menjamin kemiskinan turun.",
               "Korelasi bukan kausalitas; potongan kuartil adalah konvensi analitis, bukan batas resmi BPS.")
     st.write("")
-
     # ---- Q2
     pdrb = D["pdrb_perkapita_adhk"]
     rho2 = pdrb.corr(ipm_s, method="spearman")
@@ -536,7 +503,6 @@ with tab_find:
               "Pembangunan manusia perlu dipantau terpisah dari pertumbuhan ekonomi.",
               "Satuan PDRB per kapita belum terverifikasi terhadap tabel BPS (lihat tab Metodologi & Sumber Data); gunakan peringkat/rank, bukan nilai rupiah absolut.")
     st.write("")
-
     # ---- Q3
     gap = (D["TPAK_laki-laki"] - D["TPAK_perempuan"])
     tv = D.dropna(subset=["TPT_laki-laki", "TPT_perempuan"])
@@ -554,7 +520,6 @@ with tab_find:
               "Kebijakan ketenagakerjaan perlu memisahkan indikator menurut gender.",
               "TPAK/TPT tidak dipecah per sektor atau usia; selisih besar di wilayah tambang/perkebunan tidak dapat dijelaskan dari data ini.")
     st.write("")
-
     # ---- Q4
     gm = ipm_s.mean()
     ss_b = sum(len(g) * (g.mean() - gm) ** 2 for _, g in D.groupby("Provinsi")["IPM"])
@@ -572,7 +537,6 @@ with tab_find:
               "Penargetan pada level kabupaten/kota lebih informatif daripada hanya level provinsi.",
               "η² tidak berbobot penduduk dan sensitif terhadap satu-dua wilayah ekstrem; provinsi baru hasil pemekaran memiliki sedikit kab/kota.")
     st.write("")
-
     # ---- Q5
     summ5 = D.groupby("Klaster").agg(n=("IPM", "size"), ipm=("IPM", "median"), miskin=("Persentase_Penduduk_Miskin_2024", "median")).reindex(CLUSTER_NAMES)
     cv = pca_results["cumulative_variance"]
@@ -591,16 +555,13 @@ with tab_find:
               "Dimensi utama pembeda wilayah adalah tingkat pembangunan; partisipasi kerja (PC2) dan pertumbuhan ekonomi (PC4) adalah dimensi terpisah yang tidak sejalan dengan pembangunan.",
               "Kelompok ber-IPM terendah dapat dijadikan prioritas pembangunan dasar, sementara dimensi lain butuh penanganan berbeda.",
               "Jumlah klaster ditetapkan k = 4 (bukan hasil optimasi formal); wilayah dengan data tidak tersedia memakai imputasi median.")
-
 # ================================================================== TAB 2
 with tab2:
     section("Reduksi Dimensi: Principal Component Analysis",
             f"{len(DEFAULT_PCA_FEATURES)} indikator saling berkorelasi diringkas menjadi dimensi ortogonal (PDRB & penduduk di-log; data tidak tersedia diimputasi median). Klik titik untuk memilih wilayah.")
     pca_df = df_f[["Kabupaten/Kota", "Kode_Wilayah", "Provinsi", "Pulau", "Latitude", "Longitude", "Klaster"]
                   + DEFAULT_PCA_FEATURES + pca_results["pc_cols"]]
-
     kab_list = KAB_LIST          # klik pada peta (Tab 1) atau scatter ini memilih wilayah yang sama
-
     with st.container(border=True):
         c1, c2, c3, c4, c5 = st.columns([1, 1, 1.3, 1.6, 0.9], gap="medium")
         pc_x = c1.selectbox("Sumbu X", pca_results["pc_cols"], index=0)
@@ -615,7 +576,6 @@ with tab2:
         fig_pca = plot_pca_scatter(pca_df, pc_x, pc_y, color_var, sel_kab, biplot, pca_results["loadings_df"])
         show(fig_pca, key=KEY_PCA, on_select="rerun", selection_mode="points",
              cap=f"Setiap titik = satu kabupaten/kota (n = {len(pca_df)}). Panah merah = arah loading variabel (biplot). {SRC_NOTE}")
-
     st.write("")
     row = pca_df[pca_df["Kabupaten/Kota"] == sel_kab].iloc[0]
     full = df_master[df_master["Kabupaten/Kota"] == sel_kab].iloc[0]
@@ -644,7 +604,6 @@ with tab2:
             st.markdown(f"**Peta Provinsi {row['Provinsi']}** · IPM, wilayah terpilih ditandai merah")
             show(plot_choropleth_map(prov_df, geojson, "IPM", resolve_palette("Indigo-Teal"),
                                      highlight_kab=sel_kab, map_style=map_style, height=358), key="minimap")
-
     st.write("")
     s1, s2 = st.columns(2, gap="medium")
     with s1:
@@ -655,7 +614,6 @@ with tab2:
     with s2:
         with st.container(border=True):
             show(plot_loadings_heatmap(pca_results["loadings_df"]), key="loadings")
-
     section("Interpretasi Komponen", "Dihasilkan otomatis dari nilai loading (|loading| > 0,2).")
     cols = st.columns(len(pca_results["interpretations"]), gap="small")
     for col, (pc, info) in zip(cols, pca_results["interpretations"].items()):
@@ -675,7 +633,6 @@ with tab2:
     st.info("**Ringkasan:** " + "; ".join(lines) + f". PC3 memuat campuran (sanitasi/pertumbuhan vs penduduk/PDRB/TPT) sehingga tidak diberi label tunggal. "
             f"Tiga komponen pertama menjelaskan **{cum3:.2f}%** variabilitas. "
             f"Catatan: TPT berloading positif pada PC1, artinya wilayah dengan pembangunan lebih tinggi cenderung memiliki TPT lebih tinggi (pola khas wilayah perkotaan).", icon="💡")
-
     st.write("")
     section("Tipologi Wilayah (K-Means, k = 4)",
             f"514 wilayah dikelompokkan menurut kemiripan {len(DEFAULT_PCA_FEATURES)} indikator; klaster diurutkan dari IPM rata-rata terendah ke tertinggi.")
@@ -691,7 +648,6 @@ with tab2:
             "Miskin": st.column_config.NumberColumn("Miskin %", format="%.1f"),
             "Penduduk": st.column_config.NumberColumn("Median penduduk", format="%d")})
         st.caption("Angka rata-rata kecuali penduduk (median).")
-
 # ================================================================== TAB 3
 with tab3:
     section("Parallel Coordinates Plot", "Seret pada sumbu vertikal untuk menyaring subpopulasi (brushing).")
@@ -720,7 +676,6 @@ with tab3:
             fig_b, r = plot_bivariate(df_f, sx, sy)
             show(fig_b, key="bivar", cap="Warna = pulau. Garis putus = tren linear (OLS) dari wilayah terfilter.")
             st.caption(f"Korelasi Pearson r = **{r:+.3f}**  ({'kuat' if abs(r) > .6 else 'sedang' if abs(r) > .3 else 'lemah'}).")
-
 # ================================================================== TAB 4
 with tab4:
     section("Peta Geospasial & Data Explorer", "Dua pendekatan spasial tanpa pin: choropleth poligon dan simbol proporsional.")
@@ -738,7 +693,6 @@ with tab4:
         else:
             show(plot_proportional_symbol_map(df_f, "jumlah_penduduk", map_ind, resolve_palette(map_pal), map_style, height=600), key="map_t4_s",
                  cap=f"Ukuran lingkaran = jumlah penduduk, warna = {get_meta_label(map_ind)} ({get_meta_unit(map_ind)}). Wilayah tanpa koordinat valid tidak digambar. {SRC_NOTE}")
-
     st.write("")
     section("Master Dataset", "Cari, urutkan, dan unduh data wilayah terpilih.")
     q = st.text_input("🔎 Cari kabupaten/kota atau provinsi", placeholder="mis. Sleman, Papua, Kalimantan …")
@@ -767,7 +721,6 @@ with tab4:
     st.caption(f"Menampilkan {len(tbl)} baris. Sel kosong = data tidak tersedia / kode tidak diketahui (bukan nol).")
     st.download_button("📥 Unduh CSV", tbl.to_csv(index=False).encode("utf-8"),
                        "data_sosial_ekonomi_bps_2024.csv", "text/csv")
-
 # ================================================================== TAB HIRARKI WILAYAH (ICICLE / TREEMAP / SUNBURST)
 with tab_hier:
     section("Hirarki Wilayah Indonesia", "Indonesia → Provinsi → Kabupaten/Kota")
@@ -803,7 +756,6 @@ with tab_hier:
             "- **Filter:** mengikuti filter Pulau/Provinsi di sidebar; bila satu provinsi dipilih, provinsi itu menjadi akar."
         )
     st.caption(f"{SRC_NOTE}. PDRB per kapita ditampilkan sebagai angka (satuan belum terverifikasi; lihat tab Metodologi & Sumber Data).")
-
 # ================================================================== TAB 5
 with tab5:
     meta, koreksi = load_metadata(), load_corrections()
@@ -817,24 +769,6 @@ with tab5:
         st.markdown("**Angka nasional pembanding (kartu KPI)**")
         st.dataframe(load_benchmark_table().rename(columns={"indikator": "Indikator", "nilai": "Nilai", "periode": "Periode", "sumber": "Sumber", "catatan": "Catatan"}),
                      hide_index=True, **STRETCH)
-
-    st.write("")
-    section("Kualitas Data & Pembersihan", "Aturan koreksi bersifat deterministik dan seluruhnya tercatat (data/koreksi_data.csv).")
-    q1, q2, q3, q4 = st.columns(4, gap="medium")
-    q1.metric("Kab/kota", f"{len(df_master)}")
-    q2.metric("Kode wilayah tidak valid", f"{int((df_master['Kode_Status'] == 'tidak_valid').sum())}", help="Kode ganda / tidak sesuai konvensi; kode asli tidak diketahui sehingga dikosongkan.")
-    q3.metric("Sel data tidak tersedia", f"{int(df_master[['TPT_Jumlah', 'sanitasi_layak', 'air_minum_layak']].isna().sum().sum())}", help="TPT, sanitasi, air minum bernilai 0,00 diperlakukan sebagai tidak tersedia.")
-    q4.metric("Tanpa poligon peta", f"{len(NO_POLYGON)}", help=", ".join(NO_POLYGON) if NO_POLYGON else "Semua wilayah punya poligon")
-    with st.expander(f"Log koreksi data ({len(koreksi)} entri)"):
-        st.dataframe(koreksi, hide_index=True, **STRETCH, height=320)
-    st.markdown("""
-**Aturan pembersihan** (`tools/build_master_data.py`): **R1** kode wilayah dibaca sebagai teks; **R2** kode ganda dikosongkan bila tidak sesuai konvensi Kemendagri (kota ≥ 71, kabupaten < 71),
-kode asli tidak dikarang; **R3** koreksi provinsi *Pegunungan Bintang* dan *Kota Banjar* berdasarkan profil data; **R4** koordinat kabupaten yang berbagi koordinat dengan kotanya dihitung ulang dari centroid poligon;
-**R5** nilai 0,00 pada TPT total, sanitasi layak, dan air minum layak dianggap tidak tersedia.
-Poligon 24 kabupaten yang di GeoJSON asli identik dengan poligon kotanya diganti dengan batas GADM (± 2010) hanya untuk mengisi poligon yang keliru/hilang; 3 kabupaten tidak memiliki poligon yang benar sehingga tidak digambar (lihat `tools/fetch_replacement_boundaries.py`). 
-Kunci penggabungan dengan GeoJSON adalah **nama kabupaten/kota** (cocok pada wilayah yang memiliki poligon), bukan kode wilayah; karena itu validitas kode diperiksa terpisah.
-""")
-
     st.write("")
     section("Metodologi", "Ringkas dan sesuai dengan yang benar-benar dijalankan aplikasi.")
     with st.container(border=True):
@@ -865,5 +799,4 @@ $\lambda_i$ = varians komponen ke-$i$; $\mathbf{{v}}_i$ = bobot (*loading*). Fit
 #### 5. Keterbatasan
 Data satu tahun (tanpa tren); rata-rata antarwilayah tidak berbobot penduduk; satuan PDRB belum terverifikasi; sumber penduduk belum terdokumentasi; 3 kabupaten tidak memiliki poligon peta.
 """)
-
 html('<div class="foot">🇮🇩 Dashboard Sosial-Ekonomi Indonesia 2024 · Sumber data: Badan Pusat Statistik (BPS) RI · Dokumentasi: lihat tab Metodologi &amp; Sumber Data</div>')
