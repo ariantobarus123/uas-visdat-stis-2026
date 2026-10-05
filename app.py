@@ -26,9 +26,9 @@ st.markdown("""
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 html, body, [class*="css"], .stApp, button, input, select, textarea {font-family:'Plus Jakarta Sans',sans-serif !important;}
 .stApp {background:
-  radial-gradient(900px 480px at 92% -8%, rgba(162,77,114,.13), transparent 62%),
-  radial-gradient(800px 480px at 0% 0%, rgba(99,32,95,.07), transparent 60%),
-  linear-gradient(180deg,#f7f3fa 0%,#f1eaf8 100%) !important;
+  radial-gradient(900px 520px at 92% -8%, rgba(157,61,143,.30), transparent 62%),
+  radial-gradient(800px 520px at 0% 0%, rgba(124,58,237,.22), transparent 60%),
+  linear-gradient(180deg,#eadbfb 0%,#d9c2f5 100%) !important;
   background-attachment: fixed !important;}
 [data-testid="stMain"], section.main {background: transparent !important;}
 header[data-testid="stHeader"] {background: transparent;}
@@ -100,10 +100,23 @@ h3 {font-weight:800 !important;}
 .sec .bar {width:5px; height:22px; border-radius:4px; background:linear-gradient(#4f46e5,#0d9488);}
 .sec h4 {margin:0; font-size:1.08rem; font-weight:800;}
 .sub {color:#64748b; font-size:.88rem; margin:0 0 12px 15px;}
-/* Panels (st.container(border=True)) */
-div[data-testid="stVerticalBlockBorderWrapper"] {background:linear-gradient(180deg,#ffffff 0%,#f9fbff 100%); border-radius:18px !important;
-  border-color:#e6dcf2 !important;
-  box-shadow:0 1px 2px rgba(42,18,83,.05), 0 14px 32px -16px rgba(74,29,122,.24);}
+/* Panel opsi peta: satu panel lavender yang rapi */
+.opt-marker {display:none;}
+:is(div[data-testid="stColumn"], div[data-testid="column"]):has(.opt-marker) {
+  background:linear-gradient(180deg,#eadbfb 0%,#dcc8f6 100%);
+  border:1px solid #cdb2f0; border-radius:16px; padding:18px 18px 14px;
+  align-self:flex-start;}
+/* hilangkan kartu putih bersarang di dalam panel */
+:is(div[data-testid="stColumn"], div[data-testid="column"]):has(.opt-marker) div[data-testid="stVerticalBlockBorderWrapper"] {
+  background:transparent !important; background-image:none !important; border:none !important;
+  box-shadow:none !important; border-radius:0 !important;}
+/* kotak statistik: seragam, angka lebih kecil */
+:is(div[data-testid="stColumn"], div[data-testid="column"]):has(.opt-marker) [data-testid="stMetric"] {
+  background:rgba(255,255,255,.55); border-radius:12px; padding:10px 12px;}
+:is(div[data-testid="stColumn"], div[data-testid="column"]):has(.opt-marker) [data-testid="stMetricValue"] {
+  font-size:1.35rem; font-weight:800; color:#2a1253;}
+:is(div[data-testid="stColumn"], div[data-testid="column"]):has(.opt-marker) [data-testid="stMetricLabel"] p {
+  font-size:.72rem; font-weight:700; color:#5b2a86; text-transform:uppercase; letter-spacing:.05em;}
 /* Profile */
 .profile {background:linear-gradient(160deg,#0f172a,#1e1b4b); color:#e2e8f0; border-radius:18px; padding:22px 22px 18px; height:100%;}
 .profile .nm {font-size:1.35rem; font-weight:800; color:#fff; letter-spacing:-.01em;}
@@ -403,6 +416,7 @@ with tab1:
         section("Peta Choropleth Wilayah", "Klik sebuah wilayah untuk memilihnya; pilihan ikut berlaku di tab Eksplorasi PCA (brushing & linking).")
         c_opt, c_map = st.columns([1, 3.6], gap="medium")
         with c_opt:
+            st.markdown('<div class="opt-marker"></div>', unsafe_allow_html=True)
             ov_ind = st.selectbox("Indikator", INDICATOR_OPTS, format_func=get_meta_label, key="ov_ind")
             ov_pal = st.selectbox("Palet warna", PALETTE_NAMES, key="ov_pal")
             st.caption(INDICATORS_META[ov_ind]["desc"])
